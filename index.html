@@ -247,45 +247,62 @@ socialShareButtons.forEach(function (button) {
 </div>
 </div>
 </section>--->
-	  <header id="header" id="home">
-				<div class="header fixed-top">
-		  			<div class="container">
-				  		<div class="row justify-content-end">
-				  			<div class="col-lg-8 col-sm-4 col-8 header-top-right no-padding">
-				  				<ul>
-				  					<li>
-				  						Mon-Fri: 8am to 2pm
-				  					</li>
-				  					<li>
-				  						Sat-Sun: 11am to 4pm
-				  					</li>
-				  					<li>
-				  						<a href="tel:(012) 6985 236 7512">(012) 6985 236 7512</a>
-				  					</li>				  					
-				  				</ul>
-				  			</div>
-				  		</div>			  					
-		  			</div>
-				</div>			  	
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="#home">Home</a></li>
-				          <li><a href="#about">About</a></li>
-                                          <li><a href="#service">Service</a></li>
-				          <li><a href="#gallery">Gallery</a></li>
-				          <li><a href="#review">Review</a></li>
-				          <li><a href="#contact">Contact</a></li>
-				         
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
+	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom Styling */
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            color: #333 !important;
+        }
+        .navbar-brand img {
+            max-height: 60px;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#home">
+            <img src="img/logo.png" alt="Logo" title="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main Content -->
+  
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Automatically collapse the navbar on menu link click
+        $(document).ready(function () {
+            $('.nav-link').on('click', function () {
+                $('.navbar-collapse').collapse('hide'); // Collapse the menu
+            });
+
+            // Automatically collapse when clicking the toggler cross
+            $('.navbar-toggler').on('click', function () {
+                if ($('.navbar-collapse').hasClass('show')) {
+                    $('.navbar-collapse').collapse('hide'); // Close
+                }
+            });
+        });
+    </script>><!-- #header -->
 
 
 			<!-- start banner Area -->
